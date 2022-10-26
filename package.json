@@ -24,6 +24,7 @@
     "graphql": "^16.6.0"
   },
   "dependencies": {
+    "@kasi-labs/type-graphql": "link:",
     "@types/glob": "^8.0.0",
     "@types/node": "*",
     "@types/semver": "^7.3.12",
@@ -109,10 +110,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MichalLytek/type-graphql.git"
+    "url": "https://github.com/kasi-labs/type-graphql.git"
   },
   "bugs": {
-    "url": "https://github.com/MichalLytek/type-graphql/issues"
+    "url": "https://github.com/kasi-labs/type-graphql/issues"
   },
   "keywords": [
     "typescript",
@@ -126,6 +127,5 @@
   ],
   "engines": {
     "node": ">= 14.5.0"
-  },
-  "private": true
+  }
 }
