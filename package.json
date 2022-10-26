@@ -1,11 +1,12 @@
 {
-  "name": "type-graphql",
-  "version": "0.0.0-unreleased",
+  "name": "@kasi-labs/type-graphql",
+  "version": "2.0.0-alpha",
   "author": {
     "name": "Michał Lytek",
     "url": "https://github.com/MichalLytek"
   },
   "scripts": {
+    "build": "tsc",
     "test": "jest --verbose --coverage",
     "test:ci": "jest --verbose --coverage --ci --forceExit --detectOpenHandles --runInBand",
     "test:watch": "jest --watch",
