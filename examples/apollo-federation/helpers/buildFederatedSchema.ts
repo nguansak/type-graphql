@@ -7,7 +7,7 @@ import { IResolvers, printSchemaWithDirectives } from "@graphql-tools/utils";
 
 export async function buildFederatedSchema(
   options: Omit<BuildSchemaOptions, "skipCheck">,
-  referenceResolvers?: IResolvers,
+  referenceResolvers?: GraphQLResolverMap<any>,
 ) {
   const schema = await buildSchema({
     ...options,
@@ -15,15 +15,13 @@ export async function buildFederatedSchema(
     skipCheck: true,
   });
 
-  console.log(printSchemaWithDirectives(schema));
-
   const federatedSchema = buildSubgraphSchema({
     typeDefs: gql(printSchemaWithDirectives(schema)),
     resolvers: createResolversMap(schema) as any,
   });
 
   if (referenceResolvers) {
-    addResolversToSchema({ schema: federatedSchema, resolvers: referenceResolvers });
+    addResolversToSchema(federatedSchema, referenceResolvers);
   }
   return federatedSchema;
 }

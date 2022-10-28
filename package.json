@@ -33,12 +33,12 @@
     "graphql-query-complexity": "^0.12.0",
     "graphql-subscriptions": "^2.0.0",
     "semver": "^7.3.7",
-    "tslib": "^2.4.0"
+    "tslib": "^2.4.0",
+    "type-graphql": "link:"
   },
   "devDependencies": {
-    "@apollo/federation": "^0.36.1",
-    "@apollo/gateway": "^2.1.1",
-    "@apollo/subgraph": "^2.1.1",
+    "@apollo/gateway": "^2.1.4",
+    "@apollo/subgraph": "^2.1.4",
     "@babel/plugin-syntax-decorators": "^7.19.0",
     "@babel/preset-env": "^7.19.0",
     "@babel/preset-typescript": "^7.18.6",
