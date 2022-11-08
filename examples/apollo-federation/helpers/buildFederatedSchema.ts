@@ -2,8 +2,8 @@ import { buildSchema, BuildSchemaOptions, createResolversMap } from "../../../sr
 import { specifiedDirectives } from "graphql";
 import gql from "graphql-tag";
 import { buildSubgraphSchema } from "@apollo/subgraph";
-import { addResolversToSchema } from "@graphql-tools/schema";
-import { IResolvers, printSchemaWithDirectives } from "@graphql-tools/utils";
+import { addResolversToSchema, GraphQLResolverMap } from "@apollo/subgraph/dist/schema-helper";
+import { printSchemaWithDirectives } from "@graphql-tools/utils";
 
 export async function buildFederatedSchema(
   options: Omit<BuildSchemaOptions, "skipCheck">,
